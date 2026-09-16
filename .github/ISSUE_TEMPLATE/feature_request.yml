@@ -1,0 +1,80 @@
+name: Suggestion
+description: Suggest a new feature, unit, mechanic, or other improvement for the WWN mod
+title: "[Suggestion] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to share your idea! Please describe your suggestion in as much detail as you can. Concrete examples, numbers, and references help a lot.
+
+        Before submitting, please check that a similar suggestion has not been posted already. If it has, you can add your thoughts to the existing issue instead.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched the existing issues and this suggestion has not been posted yet
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What part of the mod does this suggestion relate to?
+      options:
+        - Unit
+        - Faction
+        - Gameplay / mechanics
+        - Balance
+        - Map
+        - Interface / HUD
+        - Graphics / visual effects
+        - Audio / music
+        - Campaign / missions
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What would you like to suggest?
+      description: Describe your idea in one or two sentences.
+      placeholder: I would like to see ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why is this needed?
+      description: What problem does it solve, or what does it add to the game?
+      placeholder: This would make ... more interesting because ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: How should it work?
+      description: Describe the details — stats, costs, mechanics, behavior, appearance, and so on.
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives
+      description: Have you considered other ways to solve the same problem?
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Sketches, screenshots, reference links, or anything else that helps explain the idea. Drag and drop files here if needed.
+    validations:
+      required: false

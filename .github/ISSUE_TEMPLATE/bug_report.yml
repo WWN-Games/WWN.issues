@@ -1,0 +1,151 @@
+name: Mod Bug Report
+description: Report a bug, crash, or other problem with the WWN mod
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make WWN better! Please provide as much detail as possible — the more we know, the faster the bug can be found and fixed.
+
+        Before submitting, please check that this bug has not been reported already. If it has, you can add your information to the existing issue instead.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Before submitting
+      options:
+        - label: I have searched the existing issues and this bug has not been reported yet
+          required: true
+        - label: I am using the latest version of the WWN mod
+          required: false
+
+  - type: input
+    id: game-version
+    attributes:
+      label: Rusted Warfare version
+      description: You can see it in the game's main menu.
+      placeholder: "1.15p7"
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: WWN mod version
+      description: The version of the mod you are running (see the in-game mod menu).
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device
+      description: What device are you playing on?
+      options:
+        - PC / Laptop
+        - Phone
+        - Tablet
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Android
+        - iOS
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: other-mods
+    attributes:
+      label: Other mods enabled?
+      description: Does the bug still happen when only WWN is enabled?
+      options:
+        - No, only WWN was enabled
+        - Yes, other mods were enabled too
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Type of bug
+      options:
+        - Crash / game freezes
+        - Gameplay / mechanics
+        - Graphics / visual
+        - Audio / sound
+        - Interface / UI
+        - AI
+        - Balance
+        - Performance
+        - Text / translation
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What is the bug?
+      description: Describe what went wrong. Include the full error message or crash text if there is one.
+      placeholder: Tell us what happens, how often it happens, and under what circumstances.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the bug?
+      placeholder: |
+        1. Start a skirmish on ...
+        2. Build ...
+        3. Select ...
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen instead?
+      placeholder: I expected ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / video
+      description: Drag and drop images or short videos here, or paste links to them.
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / save files
+      description: Attach the game log or the save file if the bug is related to a specific game, or paste the error text.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else that might help — map, faction, unit, game mode, frequency of the bug, and so on.
+    validations:
+      required: false
